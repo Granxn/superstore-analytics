@@ -1,0 +1,10 @@
+# Ignore large data files
+data/raw/
+data/processed/
+
+# Ignore Power BI file
+powerbi/
+
+# Ignore system files
+.config
+.ipynb_checkpoints
