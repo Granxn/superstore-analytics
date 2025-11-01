@@ -1,47 +1,56 @@
-﻿# Superstore Sales Analytics
+Superstore Sales & Operations Analytics
+End-to-end data analytics project using Python (Pandas), SQL, and Power BI.
+Focus: Cleaning a raw sales dataset (~9,800 rows), auditing shipping data, and building an interactive dashboard that transparently communicates data limitations and actionable business insights.
 
-End-to-end sales analytics project analyzing the Superstore dataset. Includes data cleaning (Python, Pandas), SQL queries, and an executive dashboard built in Power BI.
+Technologies:
+Python (Pandas, Matplotlib), SQL, Power BI (DAX, Power Query), Git
 
----
+🚀 Dashboard Preview & Data Audit Findings
+Page 1: Executive Sales Overview
+High-level KPIs and professional annotation highlighting lead time artifact (inflated by missing Ship_Dates imputed as 122 days).
 
-## 🚀 Dashboard Preview
+Page 2: Product Deep Dive
+Analyze top-selling hero products, sales by category, and average per-product sales (actual data only).
 
-### Page 1: Executive Sales Overview
-![Executive Overview](reports/figures/01_executive_sales_overview.png)
+Page 3: Shipping & Operations Analysis
+Clear root cause analysis of data spike in lead time, with imputed_flag slicer for KPI comparison and transparency.
 
-### Page 2: Product Deep Dive
-![Product Deep Dive](reports/figures/02_product_deep_dive.png)
+🛠️ Project Structure
+/data/ – Raw & cleaned datasets (ignored by git)
 
-### Page 3: Shipping & Operations Analysis
-![Shipping Analysis](reports/figures/03_shipping_analysis.png)
+/notebooks/Superstore_Analysis_Project.ipynb – All Python cleaning, audit, validation, feature engineering steps
 
----
+/powerbi/ – Power BI dashboard files (ignored by git)
 
-## 🛠️ Project Structure
+/reports/figures/ – Dashboard screenshots (used in README)
 
-* **/data/**: Raw and Processed datasets (Ignored by Git)
-* **/notebooks/Superstore_Analysis_Project.ipynb**: Colab notebook with all Python cleaning code and analysis.
-* **/powerbi/**: Power BI report file (Ignored by Git)
-* **/reports/figures/**: Dashboard screenshots.
-* **.gitignore**: Specifies files for Git to ignore.
-* **README.md**: This project overview.
+.gitignore – Excludes data/system files for clean repo
 
----
+README.md – Story + instructions
 
-## 💻 How to Run
+Full dashboard (PBIX) or data available upon request.
 
-1. Download the raw data (e.g., from Kaggle or another source) and place it in /data/raw/.
-2. Run the /notebooks/Superstore_Analysis_Project.ipynb in Google Colab to perform cleaning.
-3. Open the /powerbi/superstore_report.pbix file in Power BI Desktop.
-4. If needed, refresh the data source to point to the superstore_cleaned_final.csv file on your local machine.
+💡 Key KPIs & Insights
+Total Sales (Winsorized): 796.38K
 
----
+Total Unique Orders: 1,975
 
-## 🔑 Key KPIs & Insights
+Average Lead Time (All Data): 111.87 Days (distorted; see audit insight above)
 
-* **Total Sales (Winsorized):** .38K
-* **Total Unique Orders:** 1,975
-* **Average Lead Time:** 111.87 Days
-* **Top Month:** February 2018 (.8K)
-* **Top Region:** West ()
-* **Top Product (Hero):** Canon imageCLASS 2200 Advanced Copier
+Average Lead Time (Actual Only): 99.14 Days (true business value using DAX measure)
+
+Top Product: Canon imageCLASS 2200 Advanced Copier
+
+Top Region: West
+
+Main Data Risk: 1,283 orders (13%) had missing shipping dates, inflating lead time — clearly flagged on dashboard
+
+📚 What You'll Learn
+True end-to-end delivery: cleaning → audit → dashboard
+
+Communication of data risks & findings for business/stakeholder trust
+
+How clear visual analytics + transparency helps drive reliable business decisions
+
+Want the interactive dashboard or demo?
+See my full portfolio at https://github.com/Granxn or connect on LinkedIn
