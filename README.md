@@ -1,56 +1,56 @@
-Superstore Sales & Operations Analytics
-End-to-end data analytics project using Python (Pandas), SQL, and Power BI.
-Focus: Cleaning a raw sales dataset (~9,800 rows), auditing shipping data, and building an interactive dashboard that transparently communicates data limitations and actionable business insights.
+# ⭐ Superstore Sales & Operations Analytics
+End-to-end analytics project using Python (Pandas), SQL, Power BI ✨
+Cleaned, audited, and visualized a 9,800-row retail dataset. Focus: transparent data limitation & business insight.
 
-Technologies:
-Python (Pandas, Matplotlib), SQL, Power BI (DAX, Power Query), Git
+---
+# ⭐ Superstore Sales & Operations Analytics
+End-to-end analytics project using Python (Pandas), SQL, Power BI ✨  
+Cleaned, audited, and visualized a 9,800-row retail dataset. Focus: transparent data limitation & business insight.
 
-🚀 Dashboard Preview & Data Audit Findings
-Page 1: Executive Sales Overview
-High-level KPIs and professional annotation highlighting lead time artifact (inflated by missing Ship_Dates imputed as 122 days).
+---
 
-Page 2: Product Deep Dive
-Analyze top-selling hero products, sales by category, and average per-product sales (actual data only).
+## 🚀 Dashboard Preview & Data Audit
 
-Page 3: Shipping & Operations Analysis
-Clear root cause analysis of data spike in lead time, with imputed_flag slicer for KPI comparison and transparency.
+### Executive Sales Overview
+KPIs & Data Limitation annotation (lead time artifact flagged for stakeholders).  
+![Page 1 Overview](reports/figures/Page%201%20Executive%20Sales%20Overview.png)
 
-🛠️ Project Structure
-/data/ – Raw & cleaned datasets (ignored by git)
+---
 
-/notebooks/Superstore_Analysis_Project.ipynb – All Python cleaning, audit, validation, feature engineering steps
+### Product Deep Dive
+Top hero products and category-wise sales — actionable and validated.  
+![Page 2 Product Deep Dive](reports/figures/Page%202%20Product%20Deep%20Dive.png)
 
-/powerbi/ – Power BI dashboard files (ignored by git)
+---
 
-/reports/figures/ – Dashboard screenshots (used in README)
+### Shipping & Operations Audit
+Finding & flagging a spike by root cause: 1,283 orders with imputed ship date (median 122 days), all shown with clear slicers & panel.  
+![Page 3 Shipping Analysis](reports/figures/Page%203%20Shipping%20and%20Operations%20Analysis.png)
 
-.gitignore – Excludes data/system files for clean repo
+---
 
-README.md – Story + instructions
+## 💡 Key KPIs & Insights
+* **Total Sales (Winsorized):** 796.38K
+* **Orders:** 1,975
+* **Avg. Lead Time (All Data):** 111.87 Days (distorted)
+* **Avg. Lead Time (Actual):** 99.14 Days
+* **Top Product:** Canon imageCLASS 2200 Advanced Copier
+* **Main Data Risk:** 13% orders had missing shipping dates — clearly flagged for decision-makers
 
-Full dashboard (PBIX) or data available upon request.
+---
 
-💡 Key KPIs & Insights
-Total Sales (Winsorized): 796.38K
+## 🛠️ Project Structure
+* `/notebooks/` - Colab (Python cleaning, audit, validation)
+* `/reports/figures/` - All visualization images
+* `.gitignore`, `README.md` - Portfolio docs
 
-Total Unique Orders: 1,975
+*(Note: Data and Power BI files (.csv, .pbix) are ignored by .gitignore to keep the repo lightweight.)*
 
-Average Lead Time (All Data): 111.87 Days (distorted; see audit insight above)
+---
 
-Average Lead Time (Actual Only): 99.14 Days (true business value using DAX measure)
+## 💌 Contact & Portfolio
+🔗 GitHub: https://github.com/Granxn 
+🔗 LinkedIn: https://www.linkedin.com/in/jeeranun-sena
 
-Top Product: Canon imageCLASS 2200 Advanced Copier
-
-Top Region: West
-
-Main Data Risk: 1,283 orders (13%) had missing shipping dates, inflating lead time — clearly flagged on dashboard
-
-📚 What You'll Learn
-True end-to-end delivery: cleaning → audit → dashboard
-
-Communication of data risks & findings for business/stakeholder trust
-
-How clear visual analytics + transparency helps drive reliable business decisions
-
-Want the interactive dashboard or demo?
-See my full portfolio at https://github.com/Granxn or connect on LinkedIn
+## 💌 Contact & Portfolio
+[GitHub](https://github.com/Granxn) | [LinkedIn](https://www.linkedin.com/in/jeeranun-sena)
