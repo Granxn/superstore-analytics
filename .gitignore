@@ -1,6 +1,15 @@
-﻿*.pyc
-__pycache__/
-*.xlsx
-*.pbix
-.ipynb_checkpoints/
+# Ignore large data files
+data/raw/
+data/processed/
+
+# Ignore Power BI file
+powerbi/
+
+# Ignore system files
+.config
+.ipynb_checkpoints
+
+# Ignore root-level data/PBIX files (if any)
 *.csv
+*.pbix
+*.xlsx
